@@ -23,7 +23,7 @@ function create()
 		area.innerHTML = '';
 		a.innerHTML = '';
 		
-		var link = 'https://www.draw.io';
+		var link = 'https://viewer.diagrams.net';
 		
 		if (url.substring(0, 32) == 'https://drive.google.com/file/d/')
 		{
@@ -45,7 +45,7 @@ function create()
 		{
 			if (document.getElementById('lightbox').checked)
 			{
-				link += '?lightbox=1&edit=_blank';
+				link += '?tags=%7B%7D&highlight=0000ff&edit=_blank&layers=1&nav=1';
 			}
 	
 			link += '#U' + encodeURIComponent(url);
@@ -58,7 +58,7 @@ function create()
 </head>
 <body onload="document.getElementById('url').focus();">
   <h2>Online Diagram Viewer</h2>
-  View public VSDX, Gliffy, Lucidchart and draw.io diagrams (Google Link Sharing Links supported):
+  View public VSDX, Gliffy, Lucidchart and diagrams.net diagrams (Google Link Sharing Links supported):
   <br><br>
   1. Link to Diagram: <input type="text" id="url" size="80" value="" placeholder="https://www.example.com/diagram.xml"></input>
   <br><br>
